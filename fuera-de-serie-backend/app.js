@@ -31,7 +31,7 @@ mongoose.connect(url, options).then(
 
 // Routes
 app.get('/', function (req, res) {
-    res.send('Tasks Server')
+    res.send('Server')
 });
 app.use('/api', apiRouter);
 
