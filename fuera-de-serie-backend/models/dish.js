@@ -26,7 +26,11 @@ const dishSchema = new Schema({
         minlength:7,
     },
     precio:{
-        type:Number, 
+        type:String, 
+        required:true,
+    },
+    calorias:{
+        type:String, 
         required:true,
     },
     activo:{
