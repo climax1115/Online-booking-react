@@ -11,7 +11,6 @@ module.exports= {
                 res.status(200).json(registro);
             }else res.status(400).send("Dish ya existe") 
         } catch (error) {
-            console.log('here')
             res.status(500).send({
                 message: "Ocurrio un error interno."
             });
@@ -22,7 +21,6 @@ module.exports= {
     //List Dish
     list: async (req,res,next)=>{
         try {
-            console.log("Aqui")
             let valorBusqueda= req.query.valor; // se le puede poner .valor o cualquier otra cosa,
             const registros = await models.dish.find({$or:[
                 {plato:new RegExp(valorBusqueda,'i') }  //esta expresion regular encuentra por text o rol, y busca coincidencias 'i'=includes

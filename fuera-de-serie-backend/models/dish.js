@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const dishSchema = new Schema({
-    categoria:{
+    categoria:[{
         type:Schema.ObjectId,  
         ref:'categoria', 
         required:[true, 'Categoria obligatorio']
     },
+    {
+        type:Schema.ObjectId,  
+        ref:'categoria', 
+    }],
     codigo:{
         type: String, 
         required:[true,'Codigo obligatorio'], 
