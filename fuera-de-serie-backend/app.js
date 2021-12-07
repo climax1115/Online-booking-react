@@ -6,9 +6,17 @@ const createError = require('http-errors');
 const apiRouter = require('./routes/index')
 const mongoose = require('mongoose');
 
-const app = express();
-
+// Database connection
+// const url= 'mongodb://localhost:27017/fruver'
+mongoose.Promise = global.Promise;
+const url = 'mongodb+srv://dfonseca2021:nJPGGV2HE3hYfaMp@tasks.vxwgo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
+mongoose.connect(url, options)
+.then(() => console.log('Database sucessfully connected!'))
+.catch(err => console.log(err));
+    
 // Middleware
+const app = express();
 app.use(morgan('tiny'));
 app.use(cors());
 // app.use((req, res, next) => {
@@ -20,14 +28,6 @@ app.use(cors());
 // });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Database connection
-// const url= 'mongodb://localhost:27017/fruver'
-const url = 'mongodb+srv://dfonseca2021:nJPGGV2HE3hYfaMp@tasks.vxwgo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const options = { useNewUrlParser: true, useUnifiedTopology: true };
-mongoose.Promise = global.Promise;
-mongoose.connect(url, options).then(
-    () => console.log('Database sucessfully connected!')).catch(err => console.log(err));
 
 // Routes
 app.get('/', function (req, res) {
