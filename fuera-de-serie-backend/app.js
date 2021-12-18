@@ -7,7 +7,6 @@ const apiRouter = require('./routes/index')
 const mongoose = require('mongoose');
 
 // Database connection
-// const url= 'mongodb://localhost:27017/fruver'
 mongoose.Promise = global.Promise;
 const url = 'mongodb+srv://dfonseca2021:nJPGGV2HE3hYfaMp@tasks.vxwgo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
