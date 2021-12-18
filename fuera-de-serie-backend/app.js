@@ -19,13 +19,6 @@ mongoose.connect(url, options)
 const app = express();
 app.use(morgan('tiny'));
 app.use(cors());
-// app.use((req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-//     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-//     next();
-// });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -34,11 +27,6 @@ app.get('/', function (req, res) {
     res.send('Server')
 });
 app.use('/api', apiRouter);
-
-// Middleware para vue.js
-// const history = require('connect-history-api-fallback');
-// app.use(history());
-// app.use(express.static(path.join(__dirname, 'public')));
 
 // PORT
 app.set('PORT', process.env.PORT || 5000);
