@@ -1,21 +1,38 @@
-# BACKEND
+#Hotel Burj Al Arab
+i have Named this Project for my on of the favourite hotel is burj all arab.
 
-## MERN Stack - Web application.
+##Live_Link : 
+https://tender-tesla-0e14bf.netlify.app/
 
-Final project for term 4 (Final Term) of MinTic Colombia 2022. Simple web app using MERN stack.
 
-Repositorio del equipo 1, grupo 61 UTP, relacionado con el ciclo 4; desarrollo de software, patrocinado por MinTic Colombia 2022.
+##What Have Features 
+-User Can Login Via gooogle sign in
+- User can book hotel room and choose date and room
+- Login User Can See which Date They have Booked
 
-## Deployed on Heroku
+##What Technology I have Used.
+####In front end :
+-html , css
+-JavaScript
+-React
+-FireBase
+-React-hook
+-react -animation
+-react-reveal
+-react-carosel
+#### Backend
+-Express
+-cors
+-nodemon
+-bodyParser
+-jwt-token
+-fileUploader
+-etc
+#### DataBase
+-MongoDb
+#### Hosting and deploy
+-github
+-heroku
+-netlify
 
-* Backend: https://app-restaurant-ever-backend.herokuapp.com/
 
-### Built With
-
-Major frameworks/libraries used to build this project.
-
-* [MongoDB](https://www.mongodb.com/)
-* [Mongoose.js](https://mongoosejs.com/)
-* [Express.js](https://expressjs.com/)
-* [Node.js](https://nodejs.org/)
-* [JWT](https://jwt.io/)
